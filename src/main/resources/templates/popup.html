@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/Stats.css}">
+    <title th:text="${Pokemon.name}"></title>
+</head>
+<body>
+    <table>
+        <tr><th th:text="${'#'+Pokemon.id+':' + Pokemon.name}"></th><td><img th:each="type : ${Pokemon.type}" style="width:80px;" th:src="${'/Image/'+type+'.png'}"></td></tr>
+        <tr><td colspan="2"><img th:src="${Pokemon.image}" th:alt="${Pokemon.name}"/></td></tr>
+        <tr><td class="tablestat"><p th:text="${'hp: ' + Pokemon.hp}" ></p><div th:style="${'width:' + Pokemon.hp*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.hpcss}"></div></td></tr>
+        <tr><td class="tablestat"><p th:text="${'atk: ' + Pokemon.atk}"></p><div th:style="${'width:' + Pokemon.atk*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.atkcss}"></div></td></tr>
+        <tr><td class="tablestat"><p th:text="${'def: ' + Pokemon.def}"></p><div th:style="${'width:' + Pokemon.def*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.defcss}"></div></td></tr>
+        <tr><td class="tablestat"><p th:text="${'spAtk: ' + Pokemon.spAtk}"></p><div th:style="${'width:' + Pokemon.spAtk*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.spAtkcss}"></div></td></tr>
+        <tr><td class="tablestat"><p th:text="${'spDef: ' + Pokemon.spDef}"></p><div th:style="${'width:' + Pokemon.spDef*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.spDefcss}"></div></td></tr>
+        <tr><td class="tablestat"><p th:text="${'speed: ' + Pokemon.speed}"></p><div th:style="${'width:' + Pokemon.speed*2 + 'px;'}" th:class="${'Stat Stat_' + Pokemon.speedcss}"></div></td></tr>
+    </table>
+</body>
+</html>

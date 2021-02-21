@@ -1,0 +1,52 @@
+.TypeSelect .Type
+{
+    width:100px;
+    margin: 2px;
+}
+.TypeSelect
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.PokemonList
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.Container_img
+{
+    width:250px;
+    height:250px;
+}
+
+.Container_img img
+{
+    width: auto;
+    height:auto;
+
+}
+
+.Pokemon
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.Pokemon h1
+{
+    font-size: 20px;
+    text-align:center;
+}
+
+.Pokemon:hover
+{
+    box-shadow: 5px 5px 10px black;
+}

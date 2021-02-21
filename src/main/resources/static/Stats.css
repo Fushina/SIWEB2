@@ -1,0 +1,99 @@
+.tablestat
+{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.Stat
+{
+    height: 12px;
+}
+
+table, th, td, tr {
+    border: solid;
+}
+
+.Stat_1
+{
+    background-color: #ff0000;
+}
+
+.Stat_2
+{
+    background-color: #ff3200;
+}
+
+.Stat_3
+{
+    background-color: #ff7e00;
+}
+
+.Stat_4
+{
+    background-color: #ffb200;
+}
+
+.Stat_5
+{
+    background-color: #ffcc00;
+}
+
+.Stat_6
+{
+    background-color: #fffe00;
+}
+
+.Stat_7
+{
+    background-color: #ccff00;
+}
+
+.Stat_8
+{
+    background-color: #9aff00;
+}
+
+.Stat_9
+{
+    background-color: #66ff00;
+}
+
+.Stat_10
+{
+    background-color: #34ff00;
+}
+
+.Stat_11
+{
+    background-color: #02ff3b;
+}
+
+.Stat_12
+{
+    background-color: #02ff55;
+}
+
+.Stat_13
+{
+    background-color: #02ff7f;
+}
+
+.Stat_14
+{
+    background-color: #02ffaa;
+}
+
+.Stat_15
+{
+    background-color: #9aff00;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Pokemon</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/index.css}">
+</head>
+<script>
+	function popup(id, name)
+    {
+    	console.log(name);
+    	window.open('/Pokemon/'+ id,name,'menubar=no, scrollbars=no, top=100, left=100, width=300, height=200');
+    }
+</script>
+<body>
+	<div class="GenSelect">
+		<a href="/Gen/1"><button class="Gen" id="1">Gen I</button></a>
+		<a href="/Gen/2"><button class="Gen" id="2">Gen II</button></a>
+		<a href="/Gen/3"><button class="Gen" id="3">Gen III</button></a>
+		<a href="/Gen/4"><button class="Gen" id="4">Gen IV</button></a>
+	</div>
+	<div class="TypeSelect">
+		<a href="/Type/Rock"><img class="Type" id="Rock" th:src="@{/Image/Rock.png}"></a>
+		<a href="/Type/Grass"><img class="Type" id="Grass" th:src="@{/Image/Grass.png}"></a>
+		<a href="/Type/Normal"><img class="Type" id="Normal" th:src="@{/Image/Normal.png}"></a>
+		<a href="/Type/Psychic"><img class="Type" id="Psychic" th:src="@{/Image/Psychic.png}"></a>
+		<a href="/Type/Fire"><img class="Type" id="Fire" th:src="@{/Image/Fire.png}"></a>
+		<a href="/Type/Fighting"><img class="Type" id="Fighting" th:src="@{/Image/Fighting.png}"></a>
+		<a href="/Type/Ice"><img class="Type" id="Ice" th:src="@{/Image/Ice.png}"></a>
+		<a href="/Type/Water"><img class="Type" id="Water" th:src="@{/Image/Water.png}"></a>
+		<a href="/Type/Bug"><img class="Type" id="Bug" th:src="@{/Image/Bug.png}"></a>
+		<a href="/Type/Flying"><img class="Type" id="Flying" th:src="@{/Image/Flying.png}"></a>
+		<a href="/Type/Dragon"><img class="Type" id="Dragon" th:src="@{/Image/Dragon.png}"></a>
+		<a href="/Type/Ghost"><img class="Type" id="Ghost" th:src="@{/Image/Ghost.png}"></a>
+		<a href="/Type/Poison"><img class="Type" id="Poison" th:src="@{/Image/Poison.png}"></a>
+		<a href="/Type/Dark"><img class="Type" id="Dark" th:src="@{/Image/Dark.png}"></a>
+		<a href="/Type/Electric"><img class="Type" id="Electric" th:src="@{/Image/Electric.png}"></a>
+		<a href="/Type/Steel"><img class="Type" id="Steel" th:src="@{/Image/Steel.png}"></a>
+		<a href="/Type/Ground"><img class="Type" id="Ground" th:src="@{/Image/Ground.png}"></a>
+	</div>
+
+	<div class="PokemonList">
+		<div class="Pokemon" th:each="Pokemon : ${ListPokemon}" th:attr="onclick=|popup('${Pokemon.id}','${Pokemon.name}')|">
+			<h1 th:text="${'#' + Pokemon.id + ' : ' + Pokemon.name}"></h1>
+			<div class="Container_img">
+				<img th:src="${Pokemon.image}" th:alt="${Pokemon.name}"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
